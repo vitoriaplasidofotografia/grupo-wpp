@@ -1,5 +1,4 @@
 <!doctype html><html><head>
-<link rel="icon" type="image/png" href="img/favicon.png">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -8,6 +7,7 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2019471012057081&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
+<link rel="icon" type="image/png" href="img/favicon.png">
 <meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Vitória Plasido Fotografia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -298,7 +298,7 @@ footer .copy{font-size:13px;color:var(--soft);margin-top:30px;opacity:.8}
 @media (max-width:760px){.more-box{grid-template-columns:1fr;text-align:center}.more-text p{margin-inline:auto}.more-thumbs{max-width:360px;width:100%;margin:0 auto}}
 
 /* valores ocultos: pacotes apresentados no Grupo VIP */
-.price,.pk-items{filter:blur(7px);user-select:none;-webkit-user-select:none}
+.price,.pk-items{filter:blur(14px);user-select:none;-webkit-user-select:none}
 .vip-note{max-width:620px;margin:0 auto 42px;padding:26px clamp(18px,4vw,36px);border:1px solid var(--line);border-radius:6px;background:var(--paper);text-align:center;display:grid;justify-items:center;gap:16px}
 .vip-note p{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.4;color:var(--ink)}
 .vip-note p b{font-style:normal;font-family:var(--sans);font-weight:500;letter-spacing:.08em;color:var(--gold)}
@@ -306,7 +306,10 @@ footer .copy{font-size:13px;color:var(--soft);margin-top:30px;opacity:.8}
 .vip-list li::before{content:"✦";color:var(--gold);margin-right:10px;font-size:11px}
 .vip-list b{font-weight:600;color:var(--ink)}
 .grupo-cta{margin-top:26px}
-.grupo-cta .btn{display:inline-block}
+.grupo-cta .btn{display:inline-block;position:relative;overflow:hidden;animation:ctaGlow 2.8s ease-in-out infinite}
+.grupo-cta .btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,240,205,.38) 50%,transparent 65%);transform:translateX(-120%);animation:shine 3.6s 1s ease-in-out infinite;pointer-events:none}
+.grupo-cta .btn:hover{transform:translateY(-2px)}
+@keyframes ctaGlow{0%,100%{box-shadow:0 0 0 0 rgba(176,138,79,.45)}50%{box-shadow:0 0 0 12px rgba(176,138,79,0)}}
 
 /* galeria em tela cheia */
 .gal{position:fixed;inset:0;z-index:50;background:var(--cream);overflow-y:auto;overscroll-behavior:contain;padding:calc(env(safe-area-inset-top,0px) + 0px) 0 calc(env(safe-area-inset-bottom,0px) + 24px);animation:galin .45s cubic-bezier(.2,.7,.2,1)}
